@@ -11,15 +11,12 @@ class Wordle():
     
     def __init__(self, word = None, num_guesses = 6, word_length = 5, answer_words = DEF_ANSWER_WORDS, word_bank = DEF_WORD_BANK + DEF_ANSWER_WORDS, validate = False):
         self.word_length = word_length
-        
-        if validate: # might be time consuming
-            #if validate(answer_words)
-            #if validate(word_bank)
-            pass
             
-        self.answer_words = answer_words
-        self.word_bank = word_bank
-        
+        self.answer_words = {x.lower() for x in answer_words}
+        self.word_bank = {x.lower() for x in word_bank}.union(self.answer_words)
+                     
+        if not self._validate():
+            assert ValueError("mep")
         
         if not word:
             self.word = self.chooseWord()
@@ -31,9 +28,18 @@ class Wordle():
         
         self.guess_count = 0
         
+    def _validate(self):
+        for word in self.answer_words:
+            if len(word) != self.word_length:
+                return False
+                
+        for word in self.word_bank:
+            if len(word) != self.word_length:
+                return False        
+        return True
         
     def chooseWord(self):
-        return random.choice(self.answer_words)
+        return random.choice(tuple(self.answer_words))
     
     
     def resetWord(self, word=None):
@@ -71,7 +77,7 @@ class Wordle():
         
     def guess(self, guess):
         if self.validGuess(guess):
-            ret = [self.NOT_IN_WORD, self.NOT_IN_WORD, self.NOT_IN_WORD, self.NOT_IN_WORD, self.NOT_IN_WORD]
+            ret = [self.NOT_IN_WORD] * self.word_length
             ans_letter_dict = self.getLetterCountDict(self.word)
             
             for i in range(self.word_length):
@@ -91,23 +97,21 @@ class Wordle():
             return ret
         
         #print("return: " + str(None))
-        return None
+        return "Not in word list"
         
         
 
 if __name__ == "__main__":
-    wordle = Wordle()
-    for _ in range(6):
+    with open("common-7-letter-words.txt", "r") as f:
+        wordAnswerList = f.read().strip(" ").split("\n")
+        
+    with open("word-list-7-letters.txt", "r") as f:
+        wordGuessList = f.read().strip(" ").split("\n")
+        
+    wordle = Wordle(num_guesses=20, word_length=7, answer_words=wordAnswerList, word_bank=wordGuessList, validate=True)
+    while True:
         guess = input("Enter a guess: ").lower()
         print(" ".join(wordle.guess(guess)))
         
-           
-                    
-            
-                    
-                    
-                    
                 
-    
-    
-
+       
