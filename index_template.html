@@ -3,84 +3,136 @@
 <head>
 	<title>HTML Table Generator</title> 
 	<style>
+
 		table {
-			width:100%;
-			height:100%;
-			border:5px solid #ffffff;
-			border-collapse:separate;
-			border-spacing:15px;
-			padding:17px;
-		}
-		table th {
-			border:5px solid #ffffff;
-			padding:17px;
-			background: #f0f0f0;
-			color: #313030;
-		}
-		table td {
-			border:5px solid #ffffff;
-			text-align:center;
-			padding:17px;
-			background: #bababa;
-			color: #313030;
-		}
+      width: 80%;
+      align: center;
+      
+      margin-left: auto; 
+      margin-right: auto;
+      
+    }
+    
+    td {
+      width: 20%;
+      position: relative;
+      border:1px solid #cc9494;
+      color: #313030;
+      
+    }
+    
+    td:after {
+      content: ' ';
+      display: block;
+      margin-top: 100%;
+      
+    }
+    
+    td .empty {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #ffffff;
+      
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #313030;
+    }
+    .wrong {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #787c7e;
+      
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+    }
+    
+    .wrong {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #c9b458;
+      
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+    }
+    
+    .correct {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #6aaa64;
+      color: #ffffff;
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
 	</style>
 </head>
+
 <body>
 	<table>
-		<thead>
-			<tr>
-				<th>Header 1</th>
-				<th>Header 2</th>
-				<th>Header 3</th>
-				<th>Header 4</th>
-				<th>Header 5</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td><br></td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-			</tr>
-			<tr>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-			</tr>
-			<tr>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-			</tr>
-			<tr>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-			</tr>
-			<tr>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-			</tr>
-			<tr>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
+  <tr>
+    <td><div class="correct">A</div></td>
+    <td><div class="wrong">D</div></td>
+    <td><div class="wrong">I</div></td>
+    <td><div class="wrong">E</div></td>
+    <td><div class="correct">U</div></td>
+  </tr>
+  <tr>
+    <td><div class="empty"></div></td>
+    <td><div class="empty"></div></td>
+    <td><div class="empty"></div></td>
+    <td><div class="empty"></div></td>
+    <td><div class="empty"></div></td>
+  </tr>
+    <tr>
+    <td><div class="empty"></div></td>
+    <td><div class="empty"></div></td>
+    <td><div class="empty"></div></td>
+    <td><div class="empty"></div></td>
+    <td><div class="empty"></div></td>
+  </tr>
+    <tr>
+    <td><div class="empty"></div></td>
+    <td><div class="empty"></div></td>
+    <td><div class="empty"></div></td>
+    <td><div class="empty"></div></td>
+    <td><div class="empty"></div></td>
+  </tr>
+    <tr>
+    <td><div class="empty"></div></td>
+    <td><div class="empty"></div></td>
+    <td><div class="empty"></div></td>
+    <td><div class="empty"></div></td>
+    <td><div class="empty"></div></td>
+  </tr>
+    <tr>
+    <td><div class="empty"></div></td>
+    <td><div class="empty"></div></td>
+    <td><div class="empty"></div></td>
+    <td><div class="empty"></div></td>
+    <td><div class="empty"></div></td>
+  </tr>
+<table>
 </body>
 </html>
