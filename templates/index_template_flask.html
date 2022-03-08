@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wordle</title> 
+  <style>
+
+    table {
+    width: 60%;
+    align: center;
+
+    margin-left: auto; 
+    margin-right: auto;
+    
+  }
+  
+  td {
+    width: 20%;
+    position: relative;
+    border:1px solid #cc9494;
+
+
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 80%;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: #FFFFFF;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+
+  }
+  
+  td:after {
+    content: ' ';
+    display: block;
+    margin-top: 100%;
+
+  }
+  
+  td .empty {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #313030;
+    
+  }
+  .X {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #787c7e;
+    
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+  }
+  
+  .Y {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #c9b458;
+    
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+  }
+  
+  .G {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #6aaa64;
+    color: #ffffff;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  </style>
+</head>
+
+<body>
+  <table>
+
+  {% for w_list in guesses: %}
+  <tr>
+    {% if w_list == None: %}
+      <td><div class="empty"></div></td>
+      <td><div class="empty"></div></td>
+      <td><div class="empty"></div></td>
+      <td><div class="empty"></div></td>
+      <td><div class="empty"></div></td>
+    {% else %}
+      {% for l in w_list %}
+        <td><div class="{{ w_list[l][1] }}">{{ w_list[l][0] }}</div></td>
+      {% endfor %}
+    {% endif %}
+
+  </tr>
+  {% endfor %}
+  <tr>
+<table>
+
+  <form action="/guess" method="post">
+  <label for="fname">Guess:</label>
+  <input type="text" id="guess" name="guess"><br><br>
+  <input type="submit" value="Submit">
+  </form>
+
+</body>
+</html>

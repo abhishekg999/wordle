@@ -1,0 +1,98 @@
+table {
+	width: 50%;
+	align: center;
+
+	margin-left: auto; 
+	margin-right: auto;
+
+}
+
+td {
+	width: 20%;
+	position: relative;
+	border:1px solid #041c42;
+
+
+	font-family: "papyrus", sans-serif;
+	font-size: 200%;
+	letter-spacing: 2px;
+	word-spacing: 2px;
+	color: #FFFFFF;
+	text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+	font-weight: normal;
+	text-decoration: none;
+	font-style: normal;
+	font-variant: normal;
+	text-transform: none;
+
+}
+
+td:after {
+	content: ' ';
+	display: block;
+	margin-top: 100%;
+
+}
+
+td .empty {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #ffffff;
+
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #313030;
+
+}
+.X {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #818fa6;
+
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #ffffff;
+
+}
+
+.Y {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #ede85f;
+
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #ffffff;
+
+}
+
+.G {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #67bf90;
+	color: #ffffff;
+
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	}
+

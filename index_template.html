@@ -4,23 +4,23 @@
 	<title>HTML Table Generator</title> 
 	<style>
 
-	  table {
-      width: 80%;
-      align: center;
-      
-      margin-left: auto; 
-      margin-right: auto;
-      
-    }
-    
-    td {
-      width: 20%;
-      position: relative;
-      border:1px solid #cc9494;
-   
+		table {
+		width: 60%;
+		align: center;
+
+		margin-left: auto; 
+		margin-right: auto;
 	  
-	  font-family: "Comic Sans MS", cursive, sans-serif;
-		font-size: 80px;
+	}
+	
+	td {
+		width: 20%;
+		position: relative;
+		border:1px solid #cc9494;
+
+
+		font-family: "Comic Sans MS", cursive, sans-serif;
+		font-size: 80%;
 		letter-spacing: 2px;
 		word-spacing: 2px;
 		color: #FFFFFF;
@@ -29,122 +29,124 @@
 		font-style: normal;
 		font-variant: normal;
 		text-transform: none;
-      
-    }
-    
-    td:after {
-      content: ' ';
-      display: block;
-      margin-top: 100%;
-      
-    }
-    
-    td .empty {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: #ffffff;
-      
-      
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #313030;
+
+	}
+	
+	td:after {
+		content: ' ';
+		display: block;
+		margin-top: 100%;
+
+	}
+	
+	td .empty {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: #ffffff;
+
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: #313030;
 	  
-    }
-    .wrong {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: #787c7e;
-      
-      
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #ffffff;
-    }
-    
-    .wrong {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: #c9b458;
-      
-      
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #ffffff;
-    }
-    
-    .correct {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: #6aaa64;
-      color: #ffffff;
-      
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    
+	}
+	.wrong {
+	  position: absolute;
+	  top: 0;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	  background: #787c7e;
+	  
+	  
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  color: #ffffff;
+	}
+	
+	.present {
+	  position: absolute;
+	  top: 0;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	  background: #c9b458;
+	  
+	  
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  color: #ffffff;
+	}
+	
+	.correct {
+	  position: absolute;
+	  top: 0;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	  background: #6aaa64;
+	  color: #ffffff;
+	  
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	}
+	
 	</style>
 </head>
 
 <body>
 	<table>
+
   <tr>
-    <td><div class="correct">A</div></td>
-    <td><div class="wrong">D</div></td>
-    <td><div class="wrong">I</div></td>
-    <td><div class="wrong">E</div></td>
-    <td><div class="correct">U</div></td>
+	<td><div class="correct">A</div></td>
+	<td><div class="wrong">D</div></td>
+	<td><div class="wrong">I</div></td>
+	<td><div class="present">E</div></td>
+	<td><div class="correct">U</div></td>
   </tr>
   <tr>
-    <td><div class="empty"></div></td>
-    <td><div class="empty"></div></td>
-    <td><div class="empty"></div></td>
-    <td><div class="empty"></div></td>
-    <td><div class="empty"></div></td>
+	<td><div class="empty"></div></td>
+	<td><div class="empty"></div></td>
+	<td><div class="empty"></div></td>
+	<td><div class="empty"></div></td>
+	<td><div class="empty"></div></td>
   </tr>
-    <tr>
-    <td><div class="empty"></div></td>
-    <td><div class="empty"></div></td>
-    <td><div class="empty"></div></td>
-    <td><div class="empty"></div></td>
-    <td><div class="empty"></div></td>
+	<tr>
+	<td><div class="empty"></div></td>
+	<td><div class="empty"></div></td>
+	<td><div class="empty"></div></td>
+	<td><div class="empty"></div></td>
+	<td><div class="empty"></div></td>
   </tr>
-    <tr>
-    <td><div class="empty"></div></td>
-    <td><div class="empty"></div></td>
-    <td><div class="empty"></div></td>
-    <td><div class="empty"></div></td>
-    <td><div class="empty"></div></td>
+	<tr>
+	<td><div class="empty"></div></td>
+	<td><div class="empty"></div></td>
+	<td><div class="empty"></div></td>
+	<td><div class="empty"></div></td>
+	<td><div class="empty"></div></td>
   </tr>
-    <tr>
-    <td><div class="empty"></div></td>
-    <td><div class="empty"></div></td>
-    <td><div class="empty"></div></td>
-    <td><div class="empty"></div></td>
-    <td><div class="empty"></div></td>
+	<tr>
+	<td><div class="empty"></div></td>
+	<td><div class="empty"></div></td>
+	<td><div class="empty"></div></td>
+	<td><div class="empty"></div></td>
+	<td><div class="empty"></div></td>
   </tr>
-    <tr>
-    <td><div class="empty"></div></td>
-    <td><div class="empty"></div></td>
-    <td><div class="empty"></div></td>
-    <td><div class="empty"></div></td>
-    <td><div class="empty"></div></td>
+	<tr>
+	<td><div class="empty"></div></td>
+	<td><div class="empty"></div></td>
+	<td><div class="empty"></div></td>
+	<td><div class="empty"></div></td>
+	<td><div class="empty"></div></td>
   </tr>
+  
 <table>
 </body>
 </html>
