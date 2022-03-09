@@ -3,7 +3,9 @@
 <head>
   <title>Wordle</title> 
   <style>
-
+    body {
+      height: 100%;
+    }
     table {
     width: 60%;
     align: center;
@@ -14,7 +16,7 @@
   }
   
   td {
-    width: 20%;
+    width: 14.28%;
     position: relative;
     border:1px solid #cc9494;
 
@@ -107,11 +109,9 @@
   {% for w_list in guesses: %}
   <tr>
     {% if w_list == None: %}
+      {% for _ in range(n_let) %}
       <td><div class="empty"></div></td>
-      <td><div class="empty"></div></td>
-      <td><div class="empty"></div></td>
-      <td><div class="empty"></div></td>
-      <td><div class="empty"></div></td>
+      {% endfor %}
     {% else %}
       {% for l in w_list %}
         <td><div class="{{ w_list[l][1] }}">{{ w_list[l][0] }}</div></td>
